@@ -67,6 +67,8 @@
     .bar__right { gap: var(--v-2); }
     .bar__mark { font-size: 1.1rem; }
   }
+  /* телефон: WhatsApp остаётся в шапке, телефон и кнопка записи прячутся */
+  @media (max-width: 700px) { .bar__tel--wa { display: inline-flex; padding: 0 .4em; font-size: .9rem; } }
   @media (max-width: 860px) { .bar.is-scrolled { background: color-mix(in oklab, var(--v-canvas) 96%, transparent); } }
   /* телефон: подписи не мельче 15 px (--v-t-sm на 390 px = 14 px) */
   @media (max-width: 860px) {
@@ -302,7 +304,7 @@
   <header class="bar">
     <a class="bar__mark" href="#top"><i aria-hidden="true"></i>Автоцентр у Абдурашида</a>
     <nav class="bar__right" aria-label="Быстрые ссылки">
-      <a class="bar__tel" href="https://wa.me/79299117777" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="bar__tel bar__tel--wa" href="https://wa.me/79299117777" target="_blank" rel="noopener" aria-label="Написать в WhatsApp">WhatsApp</a>
       <a class="bar__tel" href="tel:+79285783030">+7 (928) 578-30-30</a>
       <a class="v-btn" href="tel:+79285783030" rel="noopener">Записаться на диагностику</a>
     </nav>
